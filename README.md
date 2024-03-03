@@ -1,7 +1,7 @@
 ## Lyes Sefiane | Software Engineer 3 𓂀 | Professional Profile
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/lyes-s/lyes-sefiane/main/images/lyes-sefiane-web-app.PNG" width="50%">
+    <img src="https://raw.githubusercontent.com/lyes-s/lyes-sefiane/main/images/lyes-sefiane-web-app.PNG">
 </p>
 
 ## Deploy with NGINX and Docker
