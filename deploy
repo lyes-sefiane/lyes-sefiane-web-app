@@ -1,0 +1,70 @@
+#!/usr/bin/env bash
+
+
+# =================================
+# /!\  Menu Selection Sample   /!\
+# =================================
+
+
+echo "
+ ######                                                                                     
+ #     # ###### #####  #       ####  #   # #    # ###### #    # #####                       
+ #     # #      #    # #      #    #  # #  ##  ## #      ##   #   #                         
+ #     # #####  #    # #      #    #   #   # ## # #####  # #  #   #                         
+ #     # #      #####  #      #    #   #   #    # #      #  # #   #                         
+ #     # #      #      #      #    #   #   #    # #      #   ##   #                         
+ ######  ###### #      ######  ####    #   #    # ###### #    #   #                         
+                                                                                            
+ #     #  #####  ### #     # #     #             ######                                     
+ ##    # #     #  #  ##    #  #   #       #      #     #  ####   ####  #    # ###### #####  
+ # #   # #        #  # #   #   # #        #      #     # #    # #    # #   #  #      #    # 
+ #  #  # #  ####  #  #  #  #    #       #####    #     # #    # #      ####   #####  #    # 
+ #   # # #     #  #  #   # #   # #        #      #     # #    # #      #  #   #      #####  
+ #    ## #     #  #  #    ##  #   #       #      #     # #    # #    # #   #  #      #   #  
+ #     #  #####  ### #     # #     #             ######   ####   ####  #    # ###### #    # "
+
+declare -a options=(
+	"Docker Run"
+	"Docker Stop"
+    "Docker Remove"
+	"quit"
+)
+
+echo
+
+echo $(uname) ": Hi 😊 ! please make a selection."
+
+echo
+
+select option in "${options[@]}"
+
+do
+
+  case ${option} in
+
+    # Choice : 1
+    "Docker Run")
+          echo "Start Container: lyes-sefiane-professional-profile ...";
+          docker run -d -p 8080:80 --name lyes-sefiane-professional-profile lyes-sefiane-professional-profile:latest
+          break;;
+    # Choice : 2
+    "Docker Stop")
+          echo "Stop Container: lyes-sefiane-professional-profile ...";
+          docker stop lyes-sefiane-professional-profile
+          break;;
+    # Choice : 3
+    "Docker Remove")
+          echo "Remove Container: lyes-sefiane-professional-profile ...";
+          docker rm --force lyes-sefiane-professional-profile
+          break;;
+    # Choice : 4
+    quit)
+          echo $(uname) ": Bye !" ;
+          break;;
+
+    # Choice : Default
+    *)
+          echo $(uname) ": I'm not sure what that is O.Ô !"
+  esac
+
+done
