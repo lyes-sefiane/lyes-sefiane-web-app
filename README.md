@@ -1,10 +1,12 @@
 ## Lyes Sefiane | Software Engineer 3 𓂀 | Professional Profile
 
-* Website URL: https://lyes-sefiane.web.app
+[Copyright © 2024 Lyes Sefiane.](https://github.com/lyes-s/lyes-sefiane/blob/main/LICENSE.md) All rights reserved.
 
 <p align="center">
     <img src="https://raw.githubusercontent.com/lyes-s/lyes-sefiane/main/images/lyes-sefiane-web-app.PNG">
 </p>
+
+* Website URL: https://lyes-sefiane.web.app
 
 ## Deploy with NGINX and Docker
 
