@@ -52,7 +52,7 @@ What's Next?
   View a summary of image vulnerabilities and recommendations → docker scout quickview
 ```
 
-### Deploy
+### NGINX and Docker
 
 ```bash
 Lyes Sefiane@DESKTOP-EJF2R0S MINGW64 ~/Documents/eclipse-workspace/lyes-sefiane (main)
