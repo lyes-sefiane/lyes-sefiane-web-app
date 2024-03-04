@@ -95,7 +95,21 @@ e38b1fde5b2acba2dbdf29e27d7a09c92d27d2d27b8f261323d663c5dca409ea
 
 ## Deploy to Firebase
 
+### Firebase CLI: Initialization and Deploy
+
 ```bash
+C:\Users\Lyes Sefiane>firebase login
+i  Firebase optionally collects CLI and Emulator Suite usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+
+? Allow Firebase to collect CLI and Emulator Suite usage and error reporting information? No
+
+Visit this URL on this device to log in:
+https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=268374151&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+
+Waiting for authentication...
+
++  Success! Logged in as lyes.sefiane@gmail.com
+
 C:\Users\Lyes Sefiane\Documents\eclipse-workspace\lyes-sefiane>firebase init
 
      ######## #### ########  ######## ########     ###     ######  ########
@@ -159,6 +173,49 @@ Project Console: https://console.firebase.google.com/project/lyes-sefiane/overvi
 Hosting URL: https://lyes-sefiane.web.app
 
 C:\Users\Lyes Sefiane\Documents\eclipse-workspace\lyes-sefiane>
+```
+
+### Firebase CLI: Login & Deploy
+
+```bash
+Lyes Sefiane@DESKTOP-EJF2R0S MINGW64 ~/Documents/eclipse-workspace/lyes-sefiane (main)
+$ firebase login --interactive
+i  Firebase optionally collects CLI and Emulator Suite usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+
+? Allow Firebase to collect CLI and Emulator Suite usage and error reporting
+information? No
+Visit this URL on this device to log in:
+https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=699217391&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+
+Waiting for authentication...
+
++  Success! Logged in as lyes.sefiane@gmail.com
+
+Lyes Sefiane@DESKTOP-EJF2R0S MINGW64 ~/Documents/eclipse-workspace/lyes-sefiane (main)
+$ firebase deploy
+
+=== Deploying to 'lyes-sefiane'...
+
+i  deploying hosting
+i  hosting[lyes-sefiane]: beginning deploy...
+i  hosting[lyes-sefiane]: found 145 files in /
+i  hosting: upload complete
++  hosting[lyes-sefiane]: file upload complete
+i  hosting[lyes-sefiane]: finalizing version...
++  hosting[lyes-sefiane]: version finalized
+i  hosting[lyes-sefiane]: releasing new version...
++  hosting[lyes-sefiane]: release complete
+
++  Deploy complete!
+
+Project Console: https://console.firebase.google.com/project/lyes-sefiane/overview
+Hosting URL: https://lyes-sefiane.web.app
+
+
+Lyes Sefiane@DESKTOP-EJF2R0S MINGW64 ~/Documents/eclipse-workspace/lyes-sefiane (main)
+$ firebase logout
++  Logged out from lyes.sefiane@gmail.com
+
 ```
 
 ## Contributing
