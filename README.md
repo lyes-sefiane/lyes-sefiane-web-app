@@ -176,7 +176,7 @@ Lyes Sefiane@DESKTOP-EJF2R0S MINGW64 ~/Documents/eclipse-workspace/lyes-sefiane 
 ## GitHub Integration with Firebase
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/lyes-s/lyes-sefiane/main/images/github-deploy.PNG">
+    <img src="https://raw.githubusercontent.com/lyes-s/lyes-sefiane/main/images/firebase-deploy.PNG">
 </p>
 
 <p align="center">
