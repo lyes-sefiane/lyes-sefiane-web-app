@@ -8,7 +8,7 @@
 
 * Website URL: https://lyes-sefiane.web.app
 
-## Deploy with NGINX and Docker
+## Localhost Deploy with NGINX and Docker
 
 ### Build Docker Image
 
@@ -95,7 +95,7 @@ e38b1fde5b2acba2dbdf29e27d7a09c92d27d2d27b8f261323d663c5dca409ea
 * http://localhost:8080/
 
 
-## Deploy to Firebase
+## Deploy to Firebase with Firebase CLI
 
 ### Firebase CLI: Initialization and Deploy
 
@@ -219,6 +219,101 @@ $ firebase logout
 +  Logged out from lyes.sefiane@gmail.com
 
 ```
+
+
+## Deploy to Firebase with GitHub Actions
+
+```bash
+Lyes Sefiane@DESKTOP-EJF2R0S MINGW64 ~
+$ firebase login --interactive
+i  Firebase optionally collects CLI and Emulator Suite usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+
+? Allow Firebase to collect CLI and Emulator Suite usage and error reporting                 n
+? Allow Firebase to collect CLI and Emulator Suite usage and error reporting
+information? No
+
+Visit this URL on this device to log in:
+https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=625452047&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+
+Waiting for authentication...
+
++  Success! Logged in as lyes.sefiane@gmail.com
+
+Lyes Sefiane@DESKTOP-EJF2R0S MINGW64 ~
+$ cd Documents/eclipse-workspace/lyes-sefiane
+
+Lyes Sefiane@DESKTOP-EJF2R0S MINGW64 ~/Documents/eclipse-workspace/lyes-sefiane (main)
+$ firebase init hosting:github
+
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Lyes Sefiane\Documents\eclipse-workspace\lyes-sefiane
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+? Are you ready to proceed? (Y/n) y
+? Are you ready to proceed? Yes
+
+=== Project Setup
+
+First, let's associate this project directory with a Firebase project.
+You can create multiple project aliases by running firebase use --add,
+but for now we'll just set up a default project.
+
+i  Using project lyes-sefiane (lyes-sefiane)
+
+=== Hosting:github Setup
+
+i  Detected a .git folder at C:\Users\Lyes Sefiane\Documents\eclipse-workspace\lyes-sefiane
+i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store.
+
+Visit this URL on this device to log in:
+https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=634400349&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+
+Waiting for authentication...
+
++  Success! Logged into GitHub as lyes-s
+
+? For which GitHub repository would you like to set up a GitHub workflow?                    l
+? For which GitHub repository would you like to set up a GitHub workflow?
+- Retrieving a service account.s/lyes-sefiane
+
++  Created service account github-action-765964405 with Firebase Hosting admin permissions.
+- Uploading service account secrets to repository: lyes-s/lyes-sefiane
++  Uploaded service account JSON to GitHub as secret FIREBASE_SERVICE_ACCOUNT_LYES_SEFIANE.
+i  You can manage your secrets at https://github.com/lyes-s/lyes-sefiane/settings/secrets.
+
+? Set up the workflow to run a build script before every deploy? (y/N) y
+? Set up the workflow to run a build script before every deploy? Yes
+? What script should be run before every deploy? (npm ci && npm run build)
+? What script should be run before every deploy? npm ci && npm run build
+
++  Created workflow file C:\Users\Lyes Sefiane\Documents\eclipse-workspace\lyes-sefiane\.github/workflows/firebase-hosting-pull-request.yml
+? Set up automatic deployment to your site's live channel when a PR is merged?
+? What is the name of the GitHub branch associated with your site's live
+channel? main
++  Created workflow file C:\Users\Lyes Sefiane\Documents\eclipse-workspace\lyes-sefiane\.github/workflows/firebase-hosting-merge.yml
+
+i  Action required: Visit this URL to revoke authorization for the Firebase CLI GitHub OAuth App:
+https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+i  Action required: Push any new workflow file(s) to your repo
+
+i  Writing configuration info to firebase.json...
+i  Writing project information to .firebaserc...
+
++  Firebase initialization complete!
+
+Lyes Sefiane@DESKTOP-EJF2R0S MINGW64 ~/Documents/eclipse-workspace/lyes-sefiane (main)
+```
+
 
 ## Contributing
 
