@@ -39,4 +39,4 @@ jobs:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_LYES_SEFIANE }}'
           channelId: live
-          projectId: lyes-sefiane
+          projectId: '${{ secrets.FIREBASE_PROJECT_ID_LYES_SEFIANE }}'
