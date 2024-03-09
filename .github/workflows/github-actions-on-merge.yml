@@ -30,7 +30,7 @@ jobs:
           push: true
           tags: |
             ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_REPOSITORY }}:${{ secrets.IMAGE_TAG }}
-            ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_REPOSITORY }}:${{ env.NOW }}-${{ secrets.IMAGE_TAG_VERSION }}-${{steps.vars.outputs.tag}}
+            format('{0}/{1}:{2}_V-{3}', ${{ secrets.DOCKERHUB_USERNAME }}, ${{ secrets.DOCKERHUB_REPOSITORY }}, ${{ env.NOW }}, ${{steps.vars.outputs.tag}})
 
   #  Deploy the static website to Firebase.
   firebase_deploy:
