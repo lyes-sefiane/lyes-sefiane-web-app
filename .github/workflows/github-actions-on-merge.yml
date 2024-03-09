@@ -23,7 +23,9 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: set env
-        run: echo "TAG=$(date +'%Y-%m-%d_%H-%M-%S_' + ${{steps.vars.outputs.tag}})" >> $GITHUB_ENV
+        run: | 
+            echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV  
+            echo "TAG=$(date +'%Y-%m-%d_%H-%M-%S_' + ${{env.RELEASE_VERSION}})" >> $GITHUB_ENV
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
