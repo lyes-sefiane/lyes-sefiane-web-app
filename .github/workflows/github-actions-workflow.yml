@@ -2,7 +2,7 @@
 # https://github.com/firebase/firebase-tools
 # The file was updated to include Docker job.
 
-name: Publish Docker Image to Dockerhub and Deploy Firebase Hosting on merge
+name: dockerhub-and-firebase-hosting-deployment
 'on':
   release: 
     types: 
@@ -25,13 +25,25 @@ jobs:
       - name: set env
         run: | 
             echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV  
-            echo "TAG=$(date +'%Y-%m-%d_%H-%M-%S_')" >> $GITHUB_ENV
+            echo "DATE_NOW=$(date +'%Y-%m-%d_%H-%M-%S_')" >> $GITHUB_ENV
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
           push: true
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_REPOSITORY }}:${{ secrets.IMAGE_TAG }}
-            ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_REPOSITORY }}:${{ env.TAG }}${{env.RELEASE_VERSION}}
+            ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_REPOSITORY }}:${{ secrets.DOCKER_IMAGE_TAG_LATEST }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_REPOSITORY }}:${{ env.DATE_NOW }}${{env.RELEASE_VERSION}}
 
 
+  # Deploy the static website to Firebase.
+  firebase_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+    # - run: npm ci && npm run build
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_LYES_SEFIANE }}'
+          channelId: live
+          projectId: '${{ secrets.FIREBASE_PROJECT_ID_LYES_SEFIANE }}'
