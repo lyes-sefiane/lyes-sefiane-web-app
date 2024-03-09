@@ -1,6 +1,14 @@
-## Lyes Sefiane | Software Engineer 3 𓂀 | Professional Profile
+## License
 
-[Copyright © 2024 Lyes Sefiane.](https://github.com/lyes-s/lyes-sefiane/blob/main/LICENSE.md) All rights reserved.
+This repository is licensed under the [Creative Commons Attribution-NonCommercial-NoDerivs 4.0 International License][cc-by-nc-nd].
+
+[![CC BY-NC-ND 4.0][cc-by-nc-nd-image]][cc-by-nc-nd]
+
+[cc-by-nc-nd]: http://creativecommons.org/licenses/by-nc-nd/4.0/
+[cc-by-nc-nd-image]: https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png
+[cc-by-nc-nd-shield]: https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg
+
+## Lyes Sefiane | Software Engineer 3 𓂀 | Professional Profile
 
 <p align="center">
     <img src="https://raw.githubusercontent.com/lyes-s/lyes-sefiane/main/images/lyes-sefiane-web-app.PNG">
@@ -36,7 +44,8 @@
 ### GitHub Action Docker Job Description
 
 ```bash
-  docker:
+  # Build Docker Image and Publish it to Dockerhub.
+  dockerhub_deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Set up QEMU
@@ -48,11 +57,17 @@
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: set env
+        run: | 
+            echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV  
+            echo "DATE_NOW=$(date +'%Y-%m-%d_%H-%M-%S_')" >> $GITHUB_ENV
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_REPOSITORY }}:${{ secrets.IMAGE_TAG }}
+          tags: |
+            ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_REPOSITORY }}:${{ secrets.DOCKER_IMAGE_TAG_LATEST }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_REPOSITORY }}:${{ env.DATE_NOW }}${{env.RELEASE_VERSION}}
 ```
 ## GitHub Integration with Dockerhub
 
@@ -161,10 +176,12 @@ Lyes Sefiane@DESKTOP-EJF2R0S MINGW64 ~/Documents/eclipse-workspace/lyes-sefiane 
 ### GitHub Action Firebase Deploy Job Description
 
 ```bash
+  # Deploy the static website to Firebase.
   firebase_deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+    # - run: npm ci && npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
