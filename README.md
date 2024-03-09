@@ -16,6 +16,15 @@
 
 * Website URL: https://lyes-sefiane.web.app
 
+## GitHub Badges
+
+[![GitHub Actions](https://github.com/lyes-s/lyes-sefiane/actions/workflows/github-actions-workflow.yml/badge.svg)](https://github.com/lyes-s/lyes-sefiane/actions/workflows/github-actions-workflow.yml)
+![GitHub Pages Deployment](https://github.com/lyes-s/lyes-sefiane/actions/workflows/pages/pages-build-deployment/badge.svg?branch=main)
+![GitHub top language](https://img.shields.io/github/languages/top/lyes-s/lyes-sefiane)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/lyes-s/lyes-sefiane)
+![GitHub Release Date](https://img.shields.io/github/release-date/lyes-s/lyes-sefiane)
+![GitHub Repo stars](https://img.shields.io/github/stars/lyes-s/lyes-sefiane?style=social)
+
 ## Table Of Contents
 
   * [Build and Publish Docker Image to DockerHub with GitHub Actions](#build-and-publish-docker-image-to-dockerhub-with-github-actions)
