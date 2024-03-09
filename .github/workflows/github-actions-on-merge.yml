@@ -25,13 +25,13 @@ jobs:
       - name: set env
         run: | 
             echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV  
-            echo "TAG=$(date +'%Y-%m-%d_%H-%M-%S_')" + ${{env.RELEASE_VERSION}} >> $GITHUB_ENV
+            echo "TAG=$(date +'%Y-%m-%d_%H-%M-%S_')" >> $GITHUB_ENV
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
           push: true
           tags: |
             ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_REPOSITORY }}:${{ secrets.IMAGE_TAG }}
-            ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_REPOSITORY }}:${{ env.TAG }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_REPOSITORY }}:${{ env.TAG }}+${{env.RELEASE_VERSION}}
 
 
