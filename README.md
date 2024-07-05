@@ -11,7 +11,7 @@
 ## Lyes Sefiane | Software Engineer 3 𓂀 | Professional Profile
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/lyes-s/lyes-sefiane/main/images/lyes-sefiane-web-app.PNG">
+    <img src="https://raw.githubusercontent.com/lyes-s/lyes-sefiane/main/images/lyes-sefiane-web-app-v2.PNG">
 </p>
 
 * Website URL: https://lyes-sefiane.web.app
