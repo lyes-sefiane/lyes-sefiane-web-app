@@ -8,7 +8,7 @@
 [cc-by-nc-nd-image]: https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png
 [cc-by-nc-nd-shield]: https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg
 
-## Lyes Sefiane | Software Engineer 3 𓂀 | Professional Profile
+## Lyes Sefiane 🇩🇿 🇨🇦 | Software Engineer 3 𓂀 | Professional Profile
 
 <p align="center">
     <img src="https://raw.githubusercontent.com/lyes-s/lyes-sefiane/main/images/lyes-sefiane-web-app-v3.PNG">
