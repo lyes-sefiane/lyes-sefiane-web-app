@@ -1,6 +1,7 @@
-## License
+## Lyes Sefiane 🇩🇿 🇨🇦 | Software Engineer 3 𓂀 | Professional Profile
 
-[Creative Commons Attribution-NonCommercial-NoDerivs 4.0 International License][cc-by-nc-nd].
+
+### © 2024 | Lyes Sefiane <img src="https://raw.githubusercontent.com/wiki/lyes-sefiane/grocery-items-management-application/images/algeria-flag-icon.png" width="2%"> <img src="https://raw.githubusercontent.com/wiki/lyes-sefiane/grocery-items-management-application/images/canada-flag-icon.png" width="2%"> All Rights Reserved | [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 
 [![CC BY-NC-ND 4.0][cc-by-nc-nd-image]][cc-by-nc-nd]
 
@@ -8,10 +9,8 @@
 [cc-by-nc-nd-image]: https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png
 [cc-by-nc-nd-shield]: https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg
 
-## Lyes Sefiane 🇩🇿 🇨🇦 | Software Engineer 3 𓂀 | Professional Profile
-
-<p align="center">
-    <img src="https://raw.githubusercontent.com/lyes-sefiane/lyes-sefiane-web-app/main/images/lyes-sefiane-web-app-v4.PNG">
+<p>
+    <img src="https://raw.githubusercontent.com/lyes-sefiane/lyes-sefiane-web-app/main/images/lyes-sefiane-web-app-v4.PNG" alt="lyes-sefiane-web-app">
 </p>
 
 * Website URL: https://lyes-sefiane.web.app
@@ -80,12 +79,12 @@
 ```
 ## GitHub Integration with Dockerhub
 
-<p align="center">
-    <img src="https://raw.githubusercontent.com/lyes-s/lyes-sefiane/main/images/docker-image-build.PNG">
+<p>
+    <img src="https://raw.githubusercontent.com/lyes-s/lyes-sefiane/main/images/docker-image-build.PNG" alt="docker-image-build">
 </p>
 
-<p align="center">
-    <img src="https://raw.githubusercontent.com/lyes-s/lyes-sefiane/main/images/docker-image-publish-to-dockerhub.PNG">
+<p>
+    <img src="https://raw.githubusercontent.com/lyes-s/lyes-sefiane/main/images/docker-image-publish-to-dockerhub.PNG" alt="docker-image-publish-to-dockerhub">
 </p>
 
 ## Deploy Static Website to Firebase Hosting with GitHub Actions
@@ -201,12 +200,12 @@ Lyes Sefiane@DESKTOP-EJF2R0S MINGW64 ~/Documents/eclipse-workspace/lyes-sefiane 
 
 ## GitHub Integration with Firebase
 
-<p align="center">
-    <img src="https://raw.githubusercontent.com/lyes-s/lyes-sefiane/main/images/firebase-deploy.PNG">
+<p>
+    <img src="https://raw.githubusercontent.com/lyes-s/lyes-sefiane/main/images/firebase-deploy.PNG" alt="firebase-deploy">
 </p>
 
-<p align="center">
-    <img src="https://raw.githubusercontent.com/lyes-s/lyes-sefiane/main/images/firebase.PNG">
+<p>
+    <img src="https://raw.githubusercontent.com/lyes-s/lyes-sefiane/main/images/firebase.PNG" alt="firebase">
 </p>
 
 ## Localhost Deploy with NGINX and Docker
