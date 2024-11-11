@@ -7,10 +7,6 @@ name: dockerhub-and-firebase-hosting-deployment
   release: 
     types: 
       published
-
-env:
-  # Use docker.io for Docker Hub if empty
-  REGISTRY: docker.io
   
 jobs:
   # Build Docker Image and Publish it to Dockerhub.
@@ -24,7 +20,6 @@ jobs:
       - name: Login to Docker Hub
         uses: docker/login-action@v3
         with:
-          registry: ${{ env.REGISTRY }}
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: set env
