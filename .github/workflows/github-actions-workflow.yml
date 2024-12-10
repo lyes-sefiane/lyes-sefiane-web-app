@@ -7,7 +7,7 @@ name: dockerhub-and-firebase-hosting-deployment
   release: 
     types: 
       published
-
+  
 jobs:
   # Build Docker Image and Publish it to Dockerhub.
   dockerhub_deploy:
