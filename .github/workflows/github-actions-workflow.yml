@@ -4,6 +4,8 @@
 
 name: dockerhub-and-firebase-hosting-deployment
 'on':
+  push: 
+    branches: ["develop", "lyes-sefiane-web-application-profile-enhancement-2025-05-10"]
   release: 
     types: 
       published
@@ -11,6 +13,7 @@ name: dockerhub-and-firebase-hosting-deployment
 jobs:
   # Build Docker Image and Publish it to Dockerhub.
   dockerhub_deploy:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
       - name: Set up QEMU
@@ -45,5 +48,6 @@ jobs:
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_LYES_SEFIANE }}'
+          firebaseToolsVersion: '13.35.0'
           channelId: live
           projectId: '${{ secrets.FIREBASE_PROJECT_ID_LYES_SEFIANE }}'
