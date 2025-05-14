@@ -4,8 +4,6 @@
 
 name: dockerhub-and-firebase-hosting-deployment
 'on':
-  push: 
-    branches: ["develop", "lyes-sefiane-web-application-profile-enhancement-2025-05-10"]
   release: 
     types: 
       published
@@ -13,7 +11,6 @@ name: dockerhub-and-firebase-hosting-deployment
 jobs:
   # Build Docker Image and Publish it to Dockerhub.
   dockerhub_deploy:
-    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
       - name: Set up QEMU
