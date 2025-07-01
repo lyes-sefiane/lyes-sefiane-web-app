@@ -10,7 +10,7 @@
 [cc-by-nc-nd-shield]: https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg
 
 <p>
-    <img src="images/lyes-sefiane-canada-portfolio.PNG" alt="lyes-sefiane-web-app">
+    <img src="images/lyes-sefiane-canada-portfolio.png" alt="lyes-sefiane-web-app">
 </p>
 
 * Website URL: https://lyes-sefiane.web.app
