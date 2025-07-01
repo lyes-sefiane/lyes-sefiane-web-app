@@ -1,7 +1,7 @@
 ## Lyes SEFIANE | Software Engineering Manager
 
 
-### © 2024 | Lyes SEFIANE <img src="https://raw.githubusercontent.com/wiki/lyes-sefiane/grocery-items-management-application/images/algeria-flag-icon.png" width="2%"> <img src="https://raw.githubusercontent.com/wiki/lyes-sefiane/grocery-items-management-application/images/canada-flag-icon.png" width="2%"> All Rights Reserved | [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/)
+### Copyright © Lyes SEFIANE. All Rights Reserved | [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 
 [![CC BY-NC-ND 4.0][cc-by-nc-nd-image]][cc-by-nc-nd]
 
@@ -10,7 +10,7 @@
 [cc-by-nc-nd-shield]: https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg
 
 <p>
-    <img src="https://raw.githubusercontent.com/lyes-sefiane/lyes-sefiane-web-app/main/images/lyes-sefiane-web-app.PNG" alt="lyes-sefiane-web-app">
+    <img src="images/lyes-sefiane-canada-portfolio.PNG" alt="lyes-sefiane-web-app">
 </p>
 
 * Website URL: https://lyes-sefiane.web.app
@@ -77,15 +77,6 @@
             ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_REPOSITORY }}:${{ secrets.DOCKER_IMAGE_TAG_LATEST }}
             ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_REPOSITORY }}:${{ env.DATE_NOW }}${{env.RELEASE_VERSION}}
 ```
-## GitHub Integration with Dockerhub
-
-<p>
-    <img src="https://raw.githubusercontent.com/lyes-s/lyes-sefiane/main/images/docker-image-build.PNG" alt="docker-image-build">
-</p>
-
-<p>
-    <img src="https://raw.githubusercontent.com/lyes-s/lyes-sefiane/main/images/docker-image-publish-to-dockerhub.PNG" alt="docker-image-publish-to-dockerhub">
-</p>
 
 ## Deploy Static Website to Firebase Hosting with GitHub Actions
 
@@ -197,16 +188,6 @@ Lyes Sefiane@DESKTOP-EJF2R0S MINGW64 ~/Documents/eclipse-workspace/lyes-sefiane 
           channelId: live
           projectId: '${{ secrets.FIREBASE_PROJECT_ID_LYES_SEFIANE }}'
 ```
-
-## GitHub Integration with Firebase
-
-<p>
-    <img src="https://raw.githubusercontent.com/lyes-s/lyes-sefiane/main/images/firebase-deploy.PNG" alt="firebase-deploy">
-</p>
-
-<p>
-    <img src="https://raw.githubusercontent.com/lyes-s/lyes-sefiane/main/images/firebase.PNG" alt="firebase">
-</p>
 
 ## Localhost Deploy with NGINX and Docker
 
