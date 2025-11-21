@@ -1,4 +1,4 @@
-## Lyes SEFIANE | Software Engineer 3
+## Lyes SEFIANE | [Software Engineer 3](https://drive.google.com/file/d/1BnjgDKFDwMiCZn5dc0L1Ui_25WWP7ab9/view?usp=sharing)
 
 
 ### Copyright © Lyes SEFIANE. All Rights Reserved | [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/)
@@ -399,10 +399,3 @@ $ firebase logout
 +  Logged out from lyes.sefiane@gmail.com
 
 ```
-
-## Contributing
-
-Pull requests are welcome. 
-
-For major changes, please open an issue first to discuss what you would like to change.
-
